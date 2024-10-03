@@ -1,5 +1,7 @@
 import logo from "../images/logo.webp";
 
+import fetchedUrl from "../images/bg.JPG";
+
 function Home() {
   return (
     <div className="sm:w-max md:w-max">
@@ -29,7 +31,10 @@ function Home() {
           </li>
         </ul>
       </nav>
-      <div className="relative bg-[url('E:\ancons_tech\my-app\src\images\bg.JPG')] bg-cover bg-center h-[40rem] sm:h-[155rem] w-full opacity-70">
+      <div
+        style={{ "--image-url": `url(${fetchedUrl})` }}
+        className="relative bg-[image:var(--image-url)] bg-cover bg-center h-[40rem] sm:h-[155rem] w-full opacity-70"
+      >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 text-[#fff] p-4 border border-slate-400 text-center h-full pt-[10rem]">
           <h1 className="sm:hidden text-7xl">
